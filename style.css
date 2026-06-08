@@ -144,3 +144,19 @@ nav ul{
     display:flex;
     gap:25px;
 }
+
+.tagline{
+    font-size:28px;
+    margin-top:20px;
+    font-weight:600;
+}
+
+.tech-line{
+    font-size:18px;
+    margin-top:20px;
+    max-width:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    line-height:1.8;
+    opacity:0.95;
+}
