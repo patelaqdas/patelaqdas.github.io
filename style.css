@@ -12,8 +12,7 @@ body{
 
 header{
     background:#0b3d91;
-    color:white;
-    padding:20px;
+    padding:10px 30px;
 }
 
 nav{
@@ -128,8 +127,9 @@ button{
 }
 
 .logo img{
-    height:70px;
+    height:60px;
     width:auto;
+    border-radius:8px;
 }
 
 nav{
