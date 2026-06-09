@@ -292,9 +292,9 @@ CONTACT
 Transforming Businesses Through Smart Technology
 </p>
 
-<p>
-Contact details will be updated shortly.
-</p>
+<p>📞 +91 96994 55224</p>
+<p>📧 info@360smartsolutions.com</p>
+<p>📍 Mumbai, Maharashtra, India</p>
 
 <br>
 
@@ -411,27 +411,40 @@ function closeWhatsappForm(){
 
 function sendWhatsApp(){
 
-    let name=document.getElementById('name').value;
-    let mobile=document.getElementById('mobile').value;
-    let company=document.getElementById('company').value;
-    let message=document.getElementById('message').value;
+    let name = document.getElementById('name').value.trim();
+    let mobile = document.getElementById('mobile').value.trim();
+    let company = document.getElementById('company').value.trim();
+    let message = document.getElementById('message').value.trim();
 
-    let text=
-`New Website Inquiry
+    if(name === ''){
+        alert('Please enter your name');
+        return;
+    }
+
+    if(mobile === ''){
+        alert('Please enter your mobile number');
+        return;
+    }
+
+    let text =
+`*New Website Inquiry*
 
 Name: ${name}
-
 Mobile: ${mobile}
-
 Company: ${company}
-
 Requirement: ${message}`;
 
-    let url=
+    let url =
 `https://wa.me/919699455224?text=${encodeURIComponent(text)}`;
 
     window.open(url,'_blank');
 
+    document.getElementById('whatsappPopup').style.display='none';
+
+    document.getElementById('name').value='';
+    document.getElementById('mobile').value='';
+    document.getElementById('company').value='';
+    document.getElementById('message').value='';
 }
 
 </script>
