@@ -584,4 +584,114 @@ footer p{
 
     }
 
+    /* ==========================
+WHATSAPP POPUP
+========================== */
+
+.popup{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    z-index:9999;
+
+}
+
+.popup-content{
+
+    width:400px;
+
+    max-width:90%;
+
+    background:#1E293B;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+.popup-content h2{
+
+    color:white;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+.popup-content input,
+.popup-content textarea{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#334155;
+
+    color:white;
+
+}
+
+.popup-content textarea{
+
+    height:100px;
+
+}
+
+.popup-content button{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#25D366;
+
+    border:none;
+
+    border-radius:8px;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.close-btn{
+
+    float:right;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
 }
