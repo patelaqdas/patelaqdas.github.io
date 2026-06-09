@@ -332,9 +332,18 @@ Audio Visual | Video Conferencing | IT Infrastructure | Servers | Networking | S
 
 <!-- WHATSAPP -->
 
-<div class="whatsapp" onclick="openWhatsappForm()">
-    <img src="images/whatsapp.png" alt="WhatsApp">
-</div>
+<script>
+
+function openWhatsappForm() {
+    alert("WhatsApp button clicked");
+    document.getElementById("whatsappPopup").style.display = "block";
+}
+
+function closeWhatsappForm() {
+    document.getElementById("whatsappPopup").style.display = "none";
+}
+
+</script>
 
 <!-- COUNTER SCRIPT -->
 
