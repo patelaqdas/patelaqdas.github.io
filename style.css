@@ -1,12 +1,12 @@
 /* =========================
-   GLOBAL
+   RESET
 ========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI',sans-serif;
 }
 
 html{
@@ -16,7 +16,7 @@ html{
 body{
     background:#f5f7fa;
     color:#222;
-    line-height:1.6;
+    overflow-x:hidden;
 }
 
 /* =========================
@@ -35,12 +35,22 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 50px;
+    padding:20px 60px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo{
+    display:flex;
+    align-items:center;
 }
 
 .logo img{
-    height:70px;
+    height:100px;
     width:auto;
+    display:block;
 }
 
 /* =========================
@@ -50,14 +60,14 @@ nav{
 nav ul{
     list-style:none;
     display:flex;
-    gap:35px;
+    gap:45px;
 }
 
 nav ul li a{
     text-decoration:none;
     color:white;
-    font-size:20px;
-    font-weight:500;
+    font-size:18px;
+    font-weight:600;
     transition:0.3s;
 }
 
@@ -66,7 +76,7 @@ nav ul li a:hover{
 }
 
 /* =========================
-   HERO SECTION
+   HERO
 ========================= */
 
 .hero{
@@ -90,21 +100,20 @@ nav ul li a:hover{
     align-items:center;
 
     text-align:center;
-
     color:white;
 
     padding:80px 20px;
 }
 
 .hero h1{
-    font-size:58px;
+    font-size:64px;
     font-weight:700;
     margin-bottom:15px;
-    text-shadow:0 4px 15px rgba(0,0,0,0.5);
+    text-shadow:0 5px 20px rgba(0,0,0,0.5);
 }
 
 .tagline{
-    font-size:28px;
+    font-size:32px;
     font-weight:600;
     margin-bottom:20px;
 }
@@ -125,7 +134,7 @@ nav ul li a:hover{
     background:#FF9900;
     color:white;
     text-decoration:none;
-    padding:16px 40px;
+    padding:18px 40px;
     border-radius:8px;
     font-size:20px;
     font-weight:600;
@@ -138,26 +147,33 @@ nav ul li a:hover{
 }
 
 /* =========================
-   STATS
+   COUNTERS
 ========================= */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
-
+    gap:25px;
+    padding:70px 60px;
     background:white;
-
-    padding:60px 40px;
 }
 
 .stat-box{
+    background:white;
     text-align:center;
+    padding:35px 20px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
 }
 
 .stat-box h2{
     color:#0B3D91;
-    font-size:48px;
+    font-size:52px;
     margin-bottom:10px;
 }
 
@@ -167,7 +183,7 @@ nav ul li a:hover{
 }
 
 /* =========================
-   SECTIONS
+   CONTENT SECTION
 ========================= */
 
 .container{
@@ -186,6 +202,7 @@ nav ul li a:hover{
 
 .container p{
     font-size:18px;
+    line-height:1.8;
 }
 
 /* =========================
@@ -200,19 +217,14 @@ nav ul li a:hover{
 
 .card{
     background:white;
-
     padding:30px;
-
-    border-radius:12px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.08);
-
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
     transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 }
 
 .card h3{
@@ -232,48 +244,9 @@ nav ul li a:hover{
 .contact-box{
     background:white;
     padding:50px;
-    border-radius:12px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.08);
-
+    border-radius:15px;
     text-align:center;
-}
-
-.contact-box p{
-    margin-bottom:15px;
-}
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-
-    width:70px;
-    height:70px;
-
-    background:#25D366;
-    color:white;
-
-    border-radius:50%;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-decoration:none;
-
-    font-size:32px;
-    font-weight:bold;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.3);
-
-    z-index:999;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -283,9 +256,7 @@ nav ul li a:hover{
 footer{
     background:#111;
     color:white;
-
     text-align:center;
-
     padding:50px 20px;
 }
 
@@ -298,13 +269,43 @@ footer p{
 }
 
 /* =========================
-   RESPONSIVE
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    width:70px;
+    height:70px;
+
+    background:#25D366;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+    font-size:32px;
+    font-weight:bold;
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+
+    z-index:999;
+}
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media(max-width:992px){
 
-    nav{
-        padding:15px 25px;
+    .stats{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .hero h1{
@@ -318,19 +319,17 @@ footer p{
     .tech-line{
         font-size:18px;
     }
-
-    .stats{
-        grid-template-columns:repeat(2,1fr);
-    }
 }
 
 @media(max-width:768px){
 
     nav{
         flex-direction:column;
+        padding:20px;
     }
 
-    .logo{
+    .logo img{
+        height:80px;
         margin-bottom:15px;
     }
 
@@ -353,7 +352,7 @@ footer p{
     }
 
     .tagline{
-        font-size:20px;
+        font-size:22px;
     }
 
     .tech-line{
@@ -362,43 +361,14 @@ footer p{
 
     .stats{
         grid-template-columns:1fr;
+        padding:40px 20px;
     }
 
     .container h2{
-        font-size:32px;
-    }
-
-    .logo img{
-        height:60px;
+        font-size:30px;
     }
 
     .contact-box{
         padding:30px;
     }
-    /* COUNTER SECTION */
-
-.stat-box{
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.stat-box:hover{
-    transform:translateY(-8px);
-}
-
-.stat-box h2{
-    font-size:55px;
-    color:#0B3D91;
-    margin-bottom:10px;
-    font-weight:700;
-}
-
-.stat-box p{
-    font-size:18px;
-    font-weight:600;
-}
 }
