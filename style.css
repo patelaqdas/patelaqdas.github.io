@@ -1,10 +1,12 @@
-/* RESET */
+/* =========================
+   GLOBAL
+========================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html{
@@ -14,32 +16,36 @@ html{
 body{
     background:#f5f7fa;
     color:#222;
+    line-height:1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
-    background:#0b3d91;
-    padding:15px 40px;
+    background:#0B3D91;
     position:sticky;
     top:0;
     z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding:15px 50px;
 }
 
-/* LOGO */
-
 .logo img{
-    height:90px;
+    height:70px;
     width:auto;
 }
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 nav ul{
     list-style:none;
@@ -48,24 +54,27 @@ nav ul{
 }
 
 nav ul li a{
-    color:white;
     text-decoration:none;
+    color:white;
     font-size:20px;
     font-weight:500;
     transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#ff9900;
+    color:#FF9900;
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero{
+
     background:
     linear-gradient(
-    rgba(0,0,0,0.60),
-    rgba(0,0,0,0.60)
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)
     ),
     url('images/hero.png');
 
@@ -84,21 +93,20 @@ nav ul li a:hover{
 
     color:white;
 
-    padding:100px 20px;
+    padding:80px 20px;
 }
 
 .hero h1{
-    font-size:72px;
+    font-size:58px;
     font-weight:700;
-    margin-bottom:20px;
-    text-shadow:2px 2px 15px rgba(0,0,0,0.6);
+    margin-bottom:15px;
+    text-shadow:0 4px 15px rgba(0,0,0,0.5);
 }
 
 .tagline{
-    font-size:34px;
+    font-size:28px;
     font-weight:600;
     margin-bottom:20px;
-    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
 }
 
 .tech-line{
@@ -106,45 +114,50 @@ nav ul li a:hover{
     font-size:20px;
     line-height:1.8;
     margin-bottom:40px;
-    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 
 .btn{
     display:inline-block;
-    background:#ff9900;
+    background:#FF9900;
     color:white;
     text-decoration:none;
-    padding:15px 35px;
-    border-radius:6px;
+    padding:16px 40px;
+    border-radius:8px;
     font-size:20px;
-    font-weight:bold;
+    font-weight:600;
     transition:0.3s;
 }
 
 .btn:hover{
     background:#e67e00;
+    transform:translateY(-3px);
 }
 
-/* STATS */
+/* =========================
+   STATS
+========================= */
 
 .stats{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
+
     background:white;
+
     padding:60px 40px;
-    text-align:center;
 }
 
 .stat-box{
-    padding:20px;
+    text-align:center;
 }
 
 .stat-box h2{
-    font-size:50px;
-    color:#0b3d91;
+    color:#0B3D91;
+    font-size:48px;
     margin-bottom:10px;
 }
 
@@ -153,27 +166,31 @@ nav ul li a:hover{
     font-weight:600;
 }
 
-/* GENERAL SECTION */
+/* =========================
+   SECTIONS
+========================= */
 
 .container{
     width:90%;
+    max-width:1400px;
     margin:auto;
     padding:80px 0;
 }
 
 .container h2{
     text-align:center;
-    color:#0b3d91;
+    color:#0B3D91;
     font-size:42px;
     margin-bottom:40px;
 }
 
 .container p{
     font-size:18px;
-    line-height:1.8;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .cards{
     display:grid;
@@ -183,48 +200,61 @@ nav ul li a:hover{
 
 .card{
     background:white;
-    padding:25px;
+
+    padding:30px;
+
     border-radius:12px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    transition:all 0.3s ease;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 }
 
 .card h3{
-    color:#0b3d91;
+    color:#0B3D91;
     margin-bottom:15px;
+    font-size:22px;
 }
 
 .card p{
     font-size:16px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-box{
     background:white;
-    padding:40px;
+    padding:50px;
     border-radius:12px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 .contact-box p{
     margin-bottom:15px;
 }
 
-/* WHATSAPP BUTTON */
+/* =========================
+   WHATSAPP
+========================= */
 
 .whatsapp{
     position:fixed;
-    bottom:20px;
-    right:20px;
+    bottom:25px;
+    right:25px;
 
-    width:65px;
-    height:65px;
+    width:70px;
+    height:70px;
 
     background:#25D366;
     color:white;
@@ -232,24 +262,30 @@ nav ul li a:hover{
     border-radius:50%;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     text-decoration:none;
-    font-size:28px;
+
+    font-size:32px;
     font-weight:bold;
 
-    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.3);
 
     z-index:999;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#111;
     color:white;
+
     text-align:center;
+
     padding:50px 20px;
 }
 
@@ -261,20 +297,40 @@ footer p{
     margin-bottom:10px;
 }
 
-/* MOBILE */
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    nav{
+        padding:15px 25px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .tagline{
+        font-size:24px;
+    }
+
+    .tech-line{
+        font-size:18px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
 @media(max-width:768px){
-
-    header{
-        padding:15px;
-    }
 
     nav{
         flex-direction:column;
     }
 
-    .logo img{
-        height:70px;
+    .logo{
         margin-bottom:15px;
     }
 
@@ -293,23 +349,30 @@ footer p{
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:38px;
     }
 
     .tagline{
-        font-size:24px;
+        font-size:20px;
     }
 
     .tech-line{
-        font-size:16px;
+        font-size:15px;
     }
 
     .stats{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
     }
 
     .container h2{
         font-size:32px;
     }
 
+    .logo img{
+        height:60px;
+    }
+
+    .contact-box{
+        padding:30px;
+    }
 }
