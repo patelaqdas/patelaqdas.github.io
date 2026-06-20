@@ -2,6 +2,30 @@
    XANAX IT AV - ADVANCED DARK THEME (PERFORMANCE & MOBILE OPTIMIZED)
 =================================== */
 
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;800;900&display=swap');
+
+/* --- Custom Dark Scrollbar --- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #030509; /* Matches your darkest background */
+}
+::-webkit-scrollbar-thumb {
+    background: #1e293b; /* Sleek dark grey */
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF7A00; /* Your brand orange */
+}
+
+/* --- Highlight Color (When user selects text) --- */
+::selection {
+    background: rgba(255, 122, 0, 0.3);
+    color: #ffffff;
+}
+
 :root {
     --bg-dark: #070B14;
     --bg-darker: #030509;
