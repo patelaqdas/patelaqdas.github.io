@@ -12,13 +12,15 @@
 
 :root{
 
-    --bg-dark:#0F172A;
-    --card-dark:#1E293B;
-    --primary:#2563EB;
-    --accent:#F59E0B;
+    --bg-dark:#050B1F;
+    --card-dark:#0B1220;
+
+    --primary:#FF7A00;
+    --secondary:#00A651;
+    --accent:#FFB000;
 
     --white:#FFFFFF;
-    --light:#CBD5E1;
+    --light:#D1D5DB;
 
 }
 
@@ -46,11 +48,16 @@ header{
 
     z-index:1000;
 
-    background:rgba(15,23,42,0.95);
+    background:linear-gradient(
+        90deg,
+        #050B1F,
+        #08152E,
+        #050B1F
+    );
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 
-    border-bottom:1px solid rgba(255,255,255,0.08);
+    border-bottom:1px solid rgba(255,122,0,0.25);
 
 }
 
@@ -77,8 +84,15 @@ nav{
 
 .logo img{
 
-    height:90px;
+    height:80px;
     width:auto;
+
+    transition:0.3s;
+
+}
+.logo img:hover{
+
+    transform:scale(1.05);
 
 }
 
@@ -125,8 +139,8 @@ nav ul li a:hover{
     background:
 
     linear-gradient(
-        rgba(15,23,42,0.82),
-        rgba(15,23,42,0.82)
+        rgba(5,11,31,0.88),
+        rgba(5,11,31,0.88)
     ),
 
     url('images/hero.png');
@@ -150,19 +164,19 @@ nav ul li a:hover{
 
 .hero h1{
 
-    font-size:72px;
+    font-size:78px;
 
-    font-weight:800;
+    font-weight:900;
 
     color:white;
 
     margin-bottom:20px;
 
     text-shadow:
-    0 0 20px rgba(37,99,235,0.60);
+    0 0 20px rgba(255,122,0,0.40),
+    0 0 35px rgba(0,166,81,0.25);
 
 }
-
 .tagline{
 
     font-size:32px;
@@ -197,13 +211,17 @@ nav ul li a:hover{
 
     text-decoration:none;
 
-    background:var(--accent);
+    background:linear-gradient(
+        135deg,
+        #FF7A00,
+        #FFB000
+    );
 
     color:white;
 
-    padding:18px 40px;
+    padding:18px 45px;
 
-    border-radius:10px;
+    border-radius:12px;
 
     font-size:18px;
 
@@ -215,9 +233,10 @@ nav ul li a:hover{
 
 .btn:hover{
 
-    background:#D97706;
+    transform:translateY(-5px);
 
-    transform:translateY(-4px);
+    box-shadow:
+    0 0 25px rgba(255,122,0,0.40);
 
 }
 
@@ -268,7 +287,7 @@ nav ul li a:hover{
 
     font-size:55px;
 
-    color:var(--primary);
+    color:#FF7A00;
 
     margin-bottom:10px;
 
@@ -355,10 +374,10 @@ nav ul li a:hover{
 
     transform:translateY(-10px);
 
-    border-color:var(--primary);
+    border-color:#FF7A00;
 
     box-shadow:
-    0 0 25px rgba(37,99,235,0.35);
+    0 0 25px rgba(255,122,0,0.25);
 
 }
 
@@ -410,15 +429,15 @@ nav ul li a:hover{
 
 footer{
 
-    background:#020617;
+    background:#030712;
 
-    color:var(--light);
+    color:#D1D5DB;
 
     text-align:center;
 
     padding:50px 20px;
 
-    border-top:1px solid rgba(255,255,255,0.08);
+    border-top:1px solid rgba(255,122,0,0.20);
 
 }
 
@@ -464,7 +483,8 @@ footer p{
 
     border-radius:50%;
 
-    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    box-shadow:
+    0 0 25px rgba(37,211,102,0.60);
 
 }
 
