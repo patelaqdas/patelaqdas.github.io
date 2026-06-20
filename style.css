@@ -300,3 +300,26 @@ nav {
         display: none; /* In a real scenario, you'd add a hamburger menu here */
     }
 }
+
+.logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.85); /* Creates a soft white background */
+    padding: 8px 20px;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.logo a:hover {
+    background: #ffffff; /* Brightens on hover */
+    transform: translateY(-2px);
+}
+
+.logo img {
+    height: 55px; /* Slightly reduced to account for the padding */
+    width: auto;
+    display: block;
+}
