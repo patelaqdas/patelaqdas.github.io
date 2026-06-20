@@ -41,22 +41,13 @@ body{
 /* ==========================
    HEADER
 ========================== */
-
 header{
-
-    position:sticky;
-    top:0;
-
-    z-index:1000;
-
     background:linear-gradient(
     90deg,
-    #081223,
-    #0b1730
+    #ffffff,
+    #f8fafc,
+    #ffffff
     );
-
-    box-shadow:0 3px 15px rgba(0,0,0,0.15);
-
 }
 
 nav{
@@ -75,7 +66,7 @@ nav{
 
 .logo img{
 
-    height:90px;
+    height:120px;
     width:auto;
 
 }
