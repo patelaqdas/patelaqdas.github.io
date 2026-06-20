@@ -34,38 +34,40 @@ body {
     margin: 0 auto;
 }
 
-/* --- Animated Background Orbs --- */
+/* --- Animated Background Orbs (PERFORMANCE OPTIMIZED) --- */
 .bg-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(120px);
     z-index: -1;
-    animation: float 10s infinite alternate ease-in-out;
+    /* Removed the heavy filter: blur() that was causing the lag */
+    will-change: transform; /* Forces GPU hardware acceleration */
+    animation: float 15s infinite alternate ease-in-out;
 }
 
 .orb-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--brand-orange-glow) 0%, transparent 70%);
+    width: 600px; /* Made slightly larger to compensate for no blur */
+    height: 600px;
+    /* Using a soft radial gradient instead of a blur filter for the glow */
+    background: radial-gradient(circle, rgba(255, 122, 0, 0.15) 0%, rgba(255, 122, 0, 0) 65%);
     top: -100px;
     left: -100px;
 }
 
 .orb-2 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 166, 81, 0.2) 0%, transparent 70%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(0, 166, 81, 0.10) 0%, rgba(0, 166, 81, 0) 65%);
     bottom: 10%;
     right: -150px;
     animation-delay: -5s;
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(50px, 50px, 0) scale(1.1); }
 }
 
-/* --- Glassmorphism Utilities --- */
+/* --- Glassmorphism Utilities (PERFORMANCE OPTIMIZED) --- */
 .glass-panel {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
@@ -73,6 +75,7 @@ body {
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    transform: translateZ(0); /* Forces GPU hardware acceleration to stop scroll lag */
 }
 
 /* --- Navigation --- */
@@ -83,7 +86,9 @@ body {
     z-index: 1000;
     background: rgba(7, 11, 20, 0.7);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
+    transform: translateZ(0); /* Forces GPU hardware acceleration */
 }
 
 nav {
