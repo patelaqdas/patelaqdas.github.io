@@ -8,12 +8,16 @@
 </head>
 <body>
 
-    <!-- Unified Header Navigation -->
-    <header>
+    <!-- Animated Background Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <!-- Glassmorphism Header -->
+    <header class="glass-nav">
         <nav class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="XANAX IT AV SOLUTIONS Logo">
+                    <img src="images/logo.png" alt="XANAX IT AV SOLUTIONS">
                 </a>
             </div>
             <ul class="nav-links">
@@ -26,58 +30,95 @@
     </header>
 
     <main>
-        <!-- Contact Section -->
-        <section class="container section-padding">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Get in touch with our team for professional consultations and technology integration.</p>
+        <!-- Contact Hero Section -->
+        <section class="hero" style="min-height: 40vh; padding-top: 120px; padding-bottom: 20px;">
+            <div class="container hero-content glass-panel">
+                <div class="badge">Get in Touch</div>
+                <h1 class="gradient-text" style="font-size: clamp(2.5rem, 4vw, 4rem);">Contact Us</h1>
+                <p style="margin-bottom: 0;">Partner with us for your next-generation technology integration.</p>
             </div>
+        </section>
 
-            <!-- Form Wrapper with CSS Styling -->
-            <div class="contact-form">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <input type="text" placeholder="Name" required>
+        <!-- Contact Content Layout -->
+        <section class="container" style="padding-bottom: 100px; position: relative; z-index: 10;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start;">
+                
+                <!-- Contact Information Panel -->
+                <div class="glass-panel" style="padding: 40px;">
+                    <h3 class="gradient-text" style="font-size: 1.8rem; margin-bottom: 25px;">XANAX IT AV SOLUTIONS</h3>
+                    
+                    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                        <div style="background: rgba(255, 122, 0, 0.1); padding: 10px; border-radius: 50%; border: 1px solid var(--brand-orange);">
+                            📞
+                        </div>
+                        <div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">Phone</p>
+                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">+91 96994 55224[cite: 3]</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="5" placeholder="Message" required></textarea>
-                    </div>
-                    <!-- Styled Submit Button -->
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                </form>
 
-                <br><br>
-                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 25px;">
+                    <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 15px;">
+                        <div style="background: rgba(255, 122, 0, 0.1); padding: 10px; border-radius: 50%; border: 1px solid var(--brand-orange);">
+                            ✉️
+                        </div>
+                        <div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">Email</p>
+                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">info@xanaxitav.com</p>
+                        </div>
+                    </div>
 
-                <!-- Updated Contact Info matching the brand -->
-                <div style="text-align: center;">
-                    <h3 style="color: var(--brand-navy); margin-bottom: 10px;">XANAX IT AV SOLUTIONS</h3>
-                    <p style="color: var(--text-light);">Email: info@xanaxitav.com</p>
-                    <p style="color: var(--text-light);">Phone: +91 96994 55224</p>
-                    <p style="color: var(--text-light);">Mumbai, Maharashtra, India</p>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div style="background: rgba(255, 122, 0, 0.1); padding: 10px; border-radius: 50%; border: 1px solid var(--brand-orange);">
+                            📍
+                        </div>
+                        <div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">Location</p>
+                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">Mumbai, Maharashtra, India[cite: 3]</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Contact Form Panel -->
+                <div class="glass-panel" style="padding: 40px;">
+                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                        <div>
+                            <input type="text" placeholder="Name" required[cite: 2]
+                                style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s;">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" required[cite: 2]
+                                style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s;">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Phone" required[cite: 2]
+                                style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s;">
+                        </div>
+                        <div>
+                            <textarea rows="5" placeholder="Message" required[cite: 2]
+                                style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s; resize: vertical;"></textarea>
+                        </div>
+                        
+                        <!-- Glowing Submit Button -->
+                        <button type="submit" class="btn btn-glow" style="width: 100%; border: none; cursor: pointer; padding: 16px;">Send Message[cite: 2]</button>
+                    </form>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <!-- Floating WhatsApp Action -->
-    <div class="whatsapp-float">
+    <!-- Floating WhatsApp -->
+    <div class="whatsapp-float pulse">
         <a href="https://wa.me/919699455224" target="_blank" rel="noopener noreferrer">
-            <img src="images/whatsapp.png" alt="Chat with us on WhatsApp">
+            <img src="images/whatsapp.png" alt="WhatsApp">
         </a>
     </div>
 
     <!-- Unified Footer -->
     <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 XANAX IT AV SOLUTIONS. All Rights Reserved.</p>
-            <p>📍 Mumbai, Maharashtra, India | 📞 +91 96994 55224</p>
+        <div class="container" style="text-align: center; padding: 40px 0; border-top: 1px solid var(--glass-border); margin-top: 50px;">
+            <p style="color: var(--text-muted); margin-bottom: 10px;">&copy; 2026 XANAX IT AV SOLUTIONS. All Rights Reserved.[cite: 3]</p>
+            <p style="color: var(--text-muted);">📍 Mumbai, Maharashtra, India | 📞 +91 96994 55224[cite: 3]</p>
         </div>
     </footer>
 
