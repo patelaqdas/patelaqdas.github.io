@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!-- Animated Background Elements -->
+    <!-- Animated Background Orbs -->
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
 
@@ -20,6 +20,14 @@
                     <img src="images/logo.png" alt="XANAX IT AV SOLUTIONS">
                 </a>
             </div>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -30,7 +38,7 @@
     </header>
 
     <main>
-        <!-- Hero Section with Glowing Text -->
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container hero-content glass-panel">
                 <div class="badge">Next-Generation Technology</div>
@@ -44,21 +52,21 @@
             </div>
         </section>
 
-        <!-- Advanced Bento Box Stats -->
+        <!-- Stats Grid -->
         <section class="stats container">
-            <div class="stat-card glass-panel tilt-effect">
+            <div class="stat-card glass-panel">
                 <h3 class="gradient-text">100+</h3>
                 <p>Enterprise Projects</p>
             </div>
-            <div class="stat-card glass-panel tilt-effect">
+            <div class="stat-card glass-panel">
                 <h3 class="gradient-text">25+</h3>
                 <p>Global Partners</p>
             </div>
-            <div class="stat-card glass-panel tilt-effect">
+            <div class="stat-card glass-panel">
                 <h3 class="gradient-text">10+</h3>
                 <p>Years Innovating</p>
             </div>
-            <div class="stat-card glass-panel tilt-effect">
+            <div class="stat-card glass-panel">
                 <h3 class="gradient-text">24/7</h3>
                 <p>NOC Support</p>
             </div>
@@ -67,10 +75,28 @@
 
     <!-- Floating WhatsApp -->
     <div class="whatsapp-float pulse">
-        <a href="https://wa.me/919699455224" target="_blank">
+        <a href="https://wa.me/919699455224" target="_blank" rel="noopener noreferrer">
             <img src="images/whatsapp.png" alt="WhatsApp">
         </a>
     </div>
 
+    <!-- Unified Footer -->
+    <footer>
+        <div class="container" style="text-align: center; padding: 40px 0; border-top: 1px solid var(--glass-border); margin-top: 50px;">
+            <p style="color: var(--text-muted); margin-bottom: 10px;">&copy; 2026 XANAX IT AV SOLUTIONS. All Rights Reserved.</p>
+            <p style="color: var(--text-muted);">📍 Mumbai, Maharashtra, India | 📞 +91 96994 55224</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('is-active');
+        });
+    </script>
 </body>
 </html>

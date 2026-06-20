@@ -1,5 +1,5 @@
 /* ===================================
-   XANAX IT AV - ADVANCED DARK THEME
+   XANAX IT AV - ADVANCED DARK THEME (MOBILE RESPONSIVE)
 =================================== */
 
 :root {
@@ -91,11 +91,30 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    position: relative;
 }
 
 .logo img {
     height: 70px;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+    /* Apply brightness/invert here if using the white logo trick */
+}
+
+/* Hamburger Menu Icon */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background-color: var(--text-main);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links {
@@ -136,20 +155,6 @@ nav {
     overflow: hidden;
 }
 
-/* Shimmer effect inside the glass panel */
-.hero-content::before {
-    content: '';
-    position: absolute;
-    top: 0; left: -100%; width: 50%; height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.05), transparent);
-    transform: skewX(-20deg);
-    animation: shimmer 8s infinite;
-}
-
-@keyframes shimmer {
-    100% { left: 200%; }
-}
-
 .badge {
     display: inline-block;
     padding: 8px 16px;
@@ -171,7 +176,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2.5rem, 5vw, 5rem);
     font-weight: 900;
     letter-spacing: -1px;
     margin-bottom: 20px;
@@ -207,6 +212,8 @@ nav {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 14px;
+    display: inline-block;
+    text-align: center;
 }
 
 .btn-glow {
@@ -232,7 +239,7 @@ nav {
     border-color: var(--text-main);
 }
 
-/* --- Advanced Stats Grid --- */
+/* --- Stats Grid --- */
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -245,11 +252,11 @@ nav {
 .stat-card {
     padding: 40px 20px;
     text-align: center;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s ease;
 }
 
 .stat-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: var(--brand-orange-glow);
     background: rgba(255, 122, 0, 0.05);
 }
@@ -276,7 +283,7 @@ nav {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 1000;
+    z-index: 999; /* Lowered slightly so menu stays above it */
 }
 
 .whatsapp-float img {
@@ -289,37 +296,75 @@ nav {
 
 .whatsapp-float:hover img {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 25px rgba(37, 211, 102, 0.8));
 }
+
+/* ===================================
+   MOBILE RESPONSIVE MEDIA QUERIES
+=================================== */
 
 @media (max-width: 768px) {
+    /* Reveal Hamburger Menu */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Transform Nav Links into a Dropdown */
+    .nav-links {
+        position: absolute;
+        top: 100px; /* Pushes it just below the header */
+        left: 0;
+        width: 100%;
+        background: rgba(7, 11, 20, 0.95);
+        backdrop-filter: blur(25px);
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 0;
+        border-bottom: 1px solid var(--glass-border);
+        gap: 25px;
+        
+        /* Hide menu by default */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); 
+        transition: clip-path 0.4s ease-in-out;
+    }
+
+    /* Show menu when active class is applied */
+    .nav-links.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* Hamburger Animation to 'X' */
+    .menu-toggle.is-active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Adjust Hero Content Padding */
+    .hero-content {
+        padding: 40px 20px;
+    }
+
     .hero-actions {
         flex-direction: column;
+        gap: 15px;
     }
-    .nav-links {
-        display: none; /* In a real scenario, you'd add a hamburger menu here */
+
+    /* Make buttons full width on small screens */
+    .hero-actions .btn {
+        width: 100%;
     }
-}
 
-.logo a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.85); /* Creates a soft white background */
-    padding: 8px 20px;
-    border-radius: 12px; /* Smooth rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    transition: 0.3s ease;
-}
+    /* Reduce Orbs Size */
+    .orb-1 { width: 300px; height: 300px; top: -50px; left: -50px; }
+    .orb-2 { width: 300px; height: 300px; right: -50px; }
 
-.logo a:hover {
-    background: #ffffff; /* Brightens on hover */
-    transform: translateY(-2px);
-}
-
-.logo img {
-    height: 55px; /* Slightly reduced to account for the padding */
-    width: auto;
-    display: block;
+    /* Pull stats up less aggressively on mobile */
+    .stats {
+        margin-top: -30px;
+        gap: 15px;
+    }
 }

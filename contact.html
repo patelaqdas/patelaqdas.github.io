@@ -20,11 +20,19 @@
                     <img src="images/logo.png" alt="XANAX IT AV SOLUTIONS">
                 </a>
             </div>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li> <!-- Set to Active -->
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -53,7 +61,7 @@
                         </div>
                         <div>
                             <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">Phone</p>
-                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">+91 96994 55224[cite: 3]</p>
+                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">+91 96994 55224</p>
                         </div>
                     </div>
 
@@ -73,7 +81,7 @@
                         </div>
                         <div>
                             <p style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px;">Location</p>
-                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">Mumbai, Maharashtra, India[cite: 3]</p>
+                            <p style="color: var(--text-main); font-weight: 600; font-size: 1.1rem;">Mumbai, Maharashtra, India</p>
                         </div>
                     </div>
                 </div>
@@ -82,24 +90,23 @@
                 <div class="glass-panel" style="padding: 40px;">
                     <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                         <div>
-                            <input type="text" placeholder="Name" required[cite: 2]
+                            <input type="text" placeholder="Name" required
                                 style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s;">
                         </div>
                         <div>
-                            <input type="email" placeholder="Email" required[cite: 2]
+                            <input type="email" placeholder="Email" required
                                 style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s;">
                         </div>
                         <div>
-                            <input type="tel" placeholder="Phone" required[cite: 2]
+                            <input type="tel" placeholder="Phone" required
                                 style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s;">
                         </div>
                         <div>
-                            <textarea rows="5" placeholder="Message" required[cite: 2]
+                            <textarea rows="5" placeholder="Message" required
                                 style="width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 8px; color: var(--text-main); font-size: 16px; outline: none; transition: 0.3s; resize: vertical;"></textarea>
                         </div>
                         
-                        <!-- Glowing Submit Button -->
-                        <button type="submit" class="btn btn-glow" style="width: 100%; border: none; cursor: pointer; padding: 16px;">Send Message[cite: 2]</button>
+                        <button type="submit" class="btn btn-glow" style="width: 100%; border: none; cursor: pointer; padding: 16px;">Send Message</button>
                     </form>
                 </div>
 
@@ -117,10 +124,20 @@
     <!-- Unified Footer -->
     <footer>
         <div class="container" style="text-align: center; padding: 40px 0; border-top: 1px solid var(--glass-border); margin-top: 50px;">
-            <p style="color: var(--text-muted); margin-bottom: 10px;">&copy; 2026 XANAX IT AV SOLUTIONS. All Rights Reserved.[cite: 3]</p>
-            <p style="color: var(--text-muted);">📍 Mumbai, Maharashtra, India | 📞 +91 96994 55224[cite: 3]</p>
+            <p style="color: var(--text-muted); margin-bottom: 10px;">&copy; 2026 XANAX IT AV SOLUTIONS. All Rights Reserved.</p>
+            <p style="color: var(--text-muted);">📍 Mumbai, Maharashtra, India | 📞 +91 96994 55224</p>
         </div>
     </footer>
 
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('is-active');
+        });
+    </script>
 </body>
 </html>
