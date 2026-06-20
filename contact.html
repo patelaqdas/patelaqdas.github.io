@@ -1,59 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact Us</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | XANAX IT AV SOLUTIONS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<nav>
-<div class="logo">
-    <img src="images/logo.png" alt="360 Smart Solutions Logo" height="70">
-</div>
+    <!-- Unified Header Navigation -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="XANAX IT AV SOLUTIONS Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li> <!-- Set to Active -->
+            </ul>
+        </nav>
+    </header>
 
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+    <main>
+        <!-- Contact Section -->
+        <section class="container section-padding">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for professional consultations and technology integration.</p>
+            </div>
 
-<section class="container">
+            <!-- Form Wrapper with CSS Styling -->
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Message" required></textarea>
+                    </div>
+                    <!-- Styled Submit Button -->
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
 
-<div class="contact-box">
+                <br><br>
+                <hr style="border: none; border-top: 1px solid var(--border-color); margin-bottom: 25px;">
 
-<h1>Contact Us</h1>
+                <!-- Updated Contact Info matching the brand -->
+                <div style="text-align: center;">
+                    <h3 style="color: var(--brand-navy); margin-bottom: 10px;">XANAX IT AV SOLUTIONS</h3>
+                    <p style="color: var(--text-light);">Email: info@xanaxitav.com</p>
+                    <p style="color: var(--text-light);">Phone: +91 96994 55224</p>
+                    <p style="color: var(--text-light);">Mumbai, Maharashtra, India</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<input type="text" placeholder="Name">
+    <!-- Floating WhatsApp Action -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919699455224" target="_blank" rel="noopener noreferrer">
+            <img src="images/whatsapp.png" alt="Chat with us on WhatsApp">
+        </a>
+    </div>
 
-<input type="email" placeholder="Email">
-
-<input type="text" placeholder="Phone">
-
-<textarea rows="5" placeholder="Message"></textarea>
-
-<button>Send Message</button>
-
-<br><br>
-
-<h3>360 Smart Solutions</h3>
-
-<p>Email: info@360smartsolutions.com</p>
-
-<p>Phone: +91 99999 99999</p>
-
-<p>Pune, Maharashtra, India</p>
-
-</div>
-
-</section>
-
-<footer>
-© 2026 360 Smart Solutions
-</footer>
+    <!-- Unified Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 XANAX IT AV SOLUTIONS. All Rights Reserved.</p>
+            <p>📍 Mumbai, Maharashtra, India | 📞 +91 96994 55224</p>
+        </div>
+    </footer>
 
 </body>
 </html>
