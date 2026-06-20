@@ -31,7 +31,7 @@ html{
 
 body{
 
-    background:#f5f7fb;
+    background:#F8FAFC;
     color:#1f2937;
 
     overflow-x:hidden;
@@ -42,12 +42,8 @@ body{
    HEADER
 ========================== */
 header{
-    background:linear-gradient(
-    90deg,
-    #ffffff,
-    #f8fafc,
-    #ffffff
-    );
+    background:#FFFFFF;
+    border-bottom:2px solid #E5E7EB;
 }
 
 nav{
@@ -83,13 +79,13 @@ nav ul{
 
 nav ul li a{
 
-    color:white;
+    color:#0F172A;
 
     text-decoration:none;
 
     font-size:18px;
 
-    font-weight:600;
+    font-weight:700;
 
     transition:.3s;
 
@@ -97,7 +93,7 @@ nav ul li a{
 
 nav ul li a:hover{
 
-    color:var(--orange);
+     color:#FF7A00;;
 
 }
 
@@ -107,25 +103,24 @@ nav ul li a:hover{
 
 .hero{
 
-    min-height:90vh;
-
     background:
     linear-gradient(
-    rgba(8,18,35,.75),
-    rgba(8,18,35,.75)
-    ),
-    url('images/hero.png');
+    135deg,
+    #ffffff,
+    #f8fafc,
+    #eef2ff
+    );
 
-    background-size:cover;
-    background-position:center;
+    min-height:85vh;
 
     display:flex;
-    align-items:center;
+    flex-direction:column;
     justify-content:center;
+    align-items:center;
 
     text-align:center;
 
-    padding:50px 20px;
+    padding:100px 20px;
 
 }
 
@@ -137,16 +132,13 @@ nav ul li a:hover{
 
 .hero h1{
 
-    color:white;
+    color:#0F172A;
 
     font-size:72px;
 
     font-weight:900;
 
     margin-bottom:20px;
-
-    text-shadow:
-    0 0 30px rgba(255,122,0,.35);
 
 }
 
@@ -180,38 +172,43 @@ nav ul li a:hover{
 
 .btn{
 
-    display:inline-block;
-
-    padding:18px 45px;
-
-    background:linear-gradient(
-    135deg,
-    #ff7a00,
-    #ffb300
-    );
+    background:#FF7A00;
 
     color:white;
 
-    text-decoration:none;
-
     border-radius:10px;
-
-    font-size:18px;
-
-    font-weight:700;
-
-    transition:.3s;
 
 }
 
 .btn:hover{
 
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 10px 30px rgba(255,122,0,.35);
+    background:#E86C00;
 
 }
+
+/* ==========================
+   TAGLINE
+========================== */
+.tagline{
+
+    color:#FF7A00;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+.tech-line{
+
+    color:#334155;
+
+    font-size:22px;
+
+    max-width:1200px;
+
+}
+
+
 
 /* ==========================
    STATS
@@ -306,27 +303,18 @@ nav ul li a:hover{
 
 .card{
 
-    background:white;
+    background:#FFFFFF;
 
-    padding:30px;
-
-    border-radius:15px;
-
-    text-align:center;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
+    border:1px solid #E5E7EB;
 
 }
 
 .card:hover{
 
-    transform:translateY(-10px);
+    border-color:#FF7A00;
 
     box-shadow:
-    0 15px 30px rgba(255,122,0,.18);
+    0 10px 30px rgba(255,122,0,0.20);
 
 }
 
@@ -370,6 +358,12 @@ nav ul li a:hover{
     margin:15px 0;
 
     font-size:18px;
+
+}
+
+.container h2{
+
+    color:#0F172A;
 
 }
 
@@ -454,6 +448,11 @@ footer{
     repeat(2,1fr);
 
 }
+.stat-box h2{
+
+    color:#00A651;
+
+}
 
 }
 
@@ -516,6 +515,13 @@ nav ul{
 .contact-box{
 
     padding:25px;
+
+}
+footer{
+
+    background:#0F172A;
+
+    color:white;
 
 }
 
